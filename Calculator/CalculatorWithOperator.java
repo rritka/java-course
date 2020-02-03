@@ -25,7 +25,7 @@ public class CalculatorWithOperator {
 
     public double sqrt (double a) {
         double result = a / 2;       //первое приближение
-        double epsilon = 0.01;     //погрешность расчета
+        double epsilon = 0.0001;     //погрешность расчета
         while ((result - a / result) > epsilon) {
             result = 0.5 * (result + a / result);
         }
