@@ -27,11 +27,6 @@ public class VasyaIf {
             return;
         }
 
-        if (!Objects.equals(name, "Анастасия") && !Objects.equals(name, "Вася") &&
-                !Objects.equals(name, "Илья") && !Objects.equals(name, "Рита")) {
             System.out.println("Добрый день, а вы кто?");
         }
-
-
-    }
 }

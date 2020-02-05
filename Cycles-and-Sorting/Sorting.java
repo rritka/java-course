@@ -7,7 +7,7 @@ public class Sorting {
         Scanner in = new Scanner(System.in);
         System.out.print("Put length of Array: \n");
         int len = in.nextInt(); */
-int len = 7;
+int len = 10;
 
         System.out.print("Random Array: \n");    //создается рандомный массив и выводится в консоль
         int ar[] = new int[len];
@@ -16,8 +16,9 @@ int len = 7;
             System.out.print(ar[i] + " ");
         }
 
-        //ar = sortChoosingMin(ar);                //вызываю метод сортировки выбором
-        ar = sortBubble(ar);                //вызываю метод сортировки пузырьком
+        //ar = sortChoosingMin(ar);            //вызываю метод сортировки выбором
+        //ar = sortBubble(ar);                 //вызываю метод сортировки пузырьком
+        ar = sortCocktail(ar);                 //вызываю метод сортировки шейкерной
 
         System.out.println("\nSort Array:" );     //вывожу отсортированный массив
         for (int i = 0; i < ar.length; i++) {
@@ -58,4 +59,27 @@ int len = 7;
             return ar;
         }
 
+        public static int[] sortCocktail(int[] ar) { // сортировка шейкерная
+        int j = 1;
+        int k = 0;
+        while (j < (int)(ar.length)/2){
+            j++;
+            for (int i = 0; i < (ar.length - 1); i++) {
+                if (ar[i] > ar[i + 1]) {
+                    k = ar[i];
+                    ar[i] = ar[i + 1];
+                    ar[i + 1] = k;
+                }
+            }
+                for (int l = (ar.length - 1); l > 0; l--) {
+                    if (ar[l] < ar[l-1]) {
+                        k = ar[l];
+                        ar[l] = ar[l-1];
+                        ar[l-1] = k;
+                    }
+                }
+        }
+        return ar;
     }
+
+}
