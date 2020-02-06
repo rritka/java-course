@@ -18,8 +18,8 @@ int len = 10;
 
         //ar = sortChoosingMin(ar);            //вызываю метод сортировки выбором
         //ar = sortBubble(ar);                 //вызываю метод сортировки пузырьком
-        //ar = sortCocktail(ar);                 //вызываю метод сортировки шейкерной
-        ar = sortInsert(ar);                 //вызываю метод сортировки вставками
+        ar = sortCocktail(ar);                 //вызываю метод сортировки шейкерной
+        //ar = sortInsert(ar);                 //вызываю метод сортировки вставками
 
         System.out.println("\nSort Array:" );     //вывожу отсортированный массив
         for (int i = 0; i < ar.length; i++) {
@@ -61,24 +61,24 @@ int len = 10;
         }
 
         public static int[] sortCocktail(int[] ar) { // сортировка шейкерная
-        int j = 1;
+        int j = 0;
         int k = 0;
         while (j < (int)(ar.length)/2){
-            j++;
-            for (int i = 0; i < (ar.length - 1); i++) {
+            for (int i = j; i < (ar.length - 1); i++) {
                 if (ar[i] > ar[i + 1]) {
                     k = ar[i];
                     ar[i] = ar[i + 1];
                     ar[i + 1] = k;
                 }
             }
-                for (int l = (ar.length - 1); l > 0; l--) {
+                for (int l = (ar.length - 1); l > j; l--) {
                     if (ar[l] < ar[l-1]) {
                         k = ar[l];
                         ar[l] = ar[l-1];
                         ar[l-1] = k;
                     }
                 }
+            j++;
         }
         return ar;
     }
