@@ -1,60 +1,80 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Sorting {
 
     public static void main(String[] args) {
-/*
         Scanner in = new Scanner(System.in);
-        System.out.print("Put length of Array: \n");
-        int len = in.nextInt(); */
-int len = 100_000;
+        System.out.print("Put length of Array: ");
+        int len = in.nextInt();
+        System.out.println("Do you want to fill array by yourself or use random? [y/n]");
+        Scanner inn = new Scanner(System.in);
+        String bool = inn.nextLine();
+
+        int ar[] = new int[len];
+
+        if (bool.equals("y")) {
+            System.out.println("nice choice, fill array by integer: ");
+            for (int a: ar) {
+                a = in.nextInt();
+            } printArray(ar);
+        } else if (bool.equals("n")){
+            System.out.println("okay, I have created random array for you: ");
+            for (int i = 0; i < ar.length; i++) {
+            ar[i] = (int) (Math.random() * 10);
+            } printArray(ar);
+        } else {
+          System.out.println("Error");
+          return;
+        }
+
 
        // System.out.print("Random Array: \n");    //создается рандомный массив и выводится в консоль
-        int ar[] = new int[len];
-        int ar1[] = new int[len];
-        int ar2[] = new int[len];
-        int ar3[] = new int[len];
-        int ar4[] = new int[len];
+/*
+        int ar1[] = ar;
+        int ar2[] = ar;
+        int ar3[] = ar;
+        int ar4[] = ar;
+        int ar5[] = ar;
 
-        /*
-        for (int i = 0; i < ar.length; i++) {
-            ar[i] = ar1[i] = ar2[i] = ar3[i] = ar4[i] = (int) (Math.random() * 10);
-          //  System.out.print(ar[i] + " ");
-        } */
+        System.out.println("\n---Sort by choosing min---");
+        measureTime(() -> sortChoosingMin(ar));    //вызов метода сортировки выбором
+        //printArray(ar);
 
-        System.out.println("Time of sort by choosing min");
-        measureTime(() -> sortChoosingMin(ar));
-        //ar = sortChoosingMin(ar);            //вызываю метод сортировки выбором
+        System.out.println("\n---Bubble sort---");
+        measureTime(() -> sortBubble(ar1));      //вызов метода сортировки пузырьком
+        //printArray(ar1);
 
-        System.out.println("Time of bubble sort");
-        measureTime(() -> sortBubble(ar1));
-        //ar1 = sortBubble(ar1);                 //вызываю метод сортировки пузырьком
+        System.out.println("\n---Shake sort---");
+        measureTime(() -> sortCocktail(ar2));   //вызов метода сортировки шейкерной
+        //printArray(ar2);
 
-        System.out.println("Time of Shake sort");
-        measureTime(() -> sortCocktail(ar2));
-        //ar2 = sortCocktail(ar2);                 //вызываю метод сортировки шейкерной
+        System.out.println("\n---Insert sort---");
+        measureTime(() -> sortInsert(ar3));       //вызов метода сортировки вставками
+        //printArray(ar3);
 
-        System.out.println("Time of Insert sort");
-        measureTime(() -> sortInsert(ar3));
-        //ar3 = sortInsert(ar3);                 //вызываю метод сортировки вставками
+        System.out.println("\n---Merge sort---");
+        measureTime(() -> sortMerge(ar4));         //вызов метода сортировки слиянием
+        //printArray(ar4);
+*/
+        System.out.println("\n---Quick sort---");
+        measureTime(() -> sortQuick(ar));            //вызов метода быстрой сортировки
+        printArray(ar);
 
-        System.out.println("Time of Merge sort");
-        measureTime(() -> sortMerge(ar4));
-        //ar4 = sortMerge(ar4);                 //вызываю метод сортировки слиянием
+        }
 
-
-       /*
-        System.out.println("\nSort Array:" );     //вывод отсортированного массивa
-        for (int i = 0; i < ar.length; i++) {
-            System.out.print(ar[i] + " ");
-        } */
-    }
 
     public static void measureTime(Runnable sort){    //метод расчета времени выполнения сортирки
         long start = System.currentTimeMillis();
         sort.run();
         long delta = System.currentTimeMillis() - start;
-        System.out.println("Running time: " + delta + " ms\n");
+        System.out.println("Running time: " + delta + " ms");
+    }
+
+    public static void printArray (int[] array) {    //метод вывода массивa
+        for (int a: array) {
+            System.out.print(a + " ");
+        };
     }
 
         public static int[] sortChoosingMin(int[] ar) { //сортировка вставками
@@ -144,7 +164,7 @@ int len = 100_000;
             size = size * 2;
 
         }
-        return currentSrc;
+        return ar;
     }
 
     private static void merge(int[] a, int aStart, int[] b, int bStart, int[] dest,  // метод для слияния массивов
@@ -166,6 +186,41 @@ int len = 100_000;
                 indexB++;
             }
         }
+    }
+
+    public static int[] sortQuick(int[] ar) {  // сортировка разделением
+        int start = 0;
+        int end = ar.length - 1;
+        doSort(ar, start, end);
+        return ar;
+
+    }
+
+    private static void doSort(int array[], int start, int end) {  //рекурсивный метод сортировки разделением
+        if (start >= end)
+            return;
+        int i = start;
+        int j = end;
+        int cur = i - (i - j) / 2;    // центральный элемент относительно которого сортируем
+        while (i < j) {
+            while (i < cur && (array[i] <= array[cur])) {
+                i++;
+            }
+            while (j > cur && (array[cur] <= array[j])) {
+                j--;
+            }
+            if (i < j) {
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+                if (i == cur)
+                    cur = j;
+                else if (j == cur)
+                    cur = i;
+            }
+        }
+        doSort(array, start, cur);
+        doSort(array, (cur+1), end);
     }
 
 
