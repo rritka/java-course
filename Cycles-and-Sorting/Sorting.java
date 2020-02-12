@@ -4,19 +4,18 @@ import java.util.Scanner;
 public class Sorting {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in).useDelimiter("\n");
         System.out.print("Put length of Array: ");
         int len = in.nextInt();
         System.out.println("Do you want to fill array by yourself or use random? [y/n]");
-        Scanner inn = new Scanner(System.in);
-        String bool = inn.nextLine();
+        String bool = in.next();
 
         int ar[] = new int[len];
 
         if (bool.equals("y")) {
             System.out.println("nice choice, fill array by integer: ");
-            for (int a: ar) {
-                a = in.nextInt();
+            for (int i = 0; i < ar.length; i++) {
+                ar[i] = in.nextInt();
             } printArray(ar);
         } else if (bool.equals("n")){
             System.out.println("okay, I have created random array for you: ");
@@ -28,41 +27,44 @@ public class Sorting {
           return;
         }
 
+        System.out.println("\nChoose number of sorting\n 1 - Sort by choosing min\n 2 - Bubble sort\n 3 - Shake sort\n" +
+                " 4 - Insert sort\n 5 - Merge sort\n 6 - Quick sort");
 
-       // System.out.print("Random Array: \n");    //создается рандомный массив и выводится в консоль
-/*
-        int ar1[] = ar;
-        int ar2[] = ar;
-        int ar3[] = ar;
-        int ar4[] = ar;
-        int ar5[] = ar;
+        int numberOfSort = in.nextInt();
 
-        System.out.println("\n---Sort by choosing min---");
-        measureTime(() -> sortChoosingMin(ar));    //вызов метода сортировки выбором
-        //printArray(ar);
-
-        System.out.println("\n---Bubble sort---");
-        measureTime(() -> sortBubble(ar1));      //вызов метода сортировки пузырьком
-        //printArray(ar1);
-
-        System.out.println("\n---Shake sort---");
-        measureTime(() -> sortCocktail(ar2));   //вызов метода сортировки шейкерной
-        //printArray(ar2);
-
-        System.out.println("\n---Insert sort---");
-        measureTime(() -> sortInsert(ar3));       //вызов метода сортировки вставками
-        //printArray(ar3);
-
-        System.out.println("\n---Merge sort---");
-        measureTime(() -> sortMerge(ar4));         //вызов метода сортировки слиянием
-        //printArray(ar4);
-*/
-        System.out.println("\n---Quick sort---");
-        measureTime(() -> sortQuick(ar));            //вызов метода быстрой сортировки
-        printArray(ar);
-
+        switch (numberOfSort){
+            case 1 :
+                System.out.println("\n---Sort by choosing min---");
+                measureTime(() -> sortChoosingMin(ar));    //вызов метода сортировки выбором
+                printArray(ar);
+                break;
+            case 2 :
+                System.out.println("\n---Bubble sort---");
+                measureTime(() -> sortBubble(ar));      //вызов метода сортировки пузырьком
+                printArray(ar);
+                break;
+            case 3 :
+                System.out.println("\n---Shake sort---");
+                measureTime(() -> sortCocktail(ar));   //вызов метода сортировки шейкерной
+                printArray(ar);
+                break;
+            case 4 :
+                System.out.println("\n---Insert sort---");
+                measureTime(() -> sortInsert(ar));       //вызов метода сортировки вставками
+                printArray(ar);
+                break;
+            case 5 :
+                System.out.println("\n---Merge sort---");
+                measureTime(() -> sortMerge(ar));         //вызов метода сортировки слиянием
+                printArray(ar);
+                break;
+            case 6 :
+                System.out.println("\n---Quick sort---");
+                measureTime(() -> sortQuick(ar));            //вызов метода быстрой сортировки
+                printArray(ar);
+                break;
         }
-
+    }
 
     public static void measureTime(Runnable sort){    //метод расчета времени выполнения сортирки
         long start = System.currentTimeMillis();
