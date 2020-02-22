@@ -1,3 +1,5 @@
+package WarAndPeace;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -6,11 +8,19 @@ public class MainEasySearch {
     public static void main(String[] args) {
        String filePath = "/home/margarita/IdeaProjects/Enum-and-RegularExpressions/src/Война и мир.txt";
        String[] text = {readAllBytesJava7(filePath)};
-        EasySearch count = new EasySearch();
-        String wordSearch = "война";
+       EasySearch count = new EasySearch();
+       String wordSearch = "война";
 
+       measureTime(() -> count.search(text, wordSearch));
        System.out.println("counter of the word \"" + wordSearch + "\" : " + count.search(text, wordSearch));
 
+    }
+
+    public static void measureTime(Runnable search){    //метод расчета времени выполнения поиска
+        long start = System.currentTimeMillis();
+        search.run();
+        long delta = System.currentTimeMillis() - start;
+        System.out.println("Running time: " + delta + " ms");
     }
 
     private static String readAllBytesJava7(String filePath) {

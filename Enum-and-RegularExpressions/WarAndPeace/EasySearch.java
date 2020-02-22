@@ -1,3 +1,5 @@
+package WarAndPeace;
+
 public class EasySearch implements ISearchEngine {
 
     public int search(String[] text, String word) {
