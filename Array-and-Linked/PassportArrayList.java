@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -24,11 +25,23 @@ public class PassportArrayList {
         System.out.println("Size of ArrayList : " + passportID.size());
         System.out.println("Time Add elements to ArrayList : " + delta + " ms\n");
 
+
+//        long start1 = System.currentTimeMillis();
+//        passportID.clear();
+//        long delta1 = System.currentTimeMillis() - start1;
+//        System.out.println("Size of ArrayList : " + passportID.size());
+//        System.out.println("Time clear ArrayList : " + delta1 + " ms");
+
+
+        Iterator<String> itr = passportID.iterator();
         long start1 = System.currentTimeMillis();
-        passportID.clear();
+        while (itr.hasNext()) {
+            String next = itr.next();
+            itr.remove();
+        }
         long delta1 = System.currentTimeMillis() - start1;
         System.out.println("Size of ArrayList : " + passportID.size());
-        System.out.println("Time clear ArrayList : " + delta1 + " ms");
+        System.out.println("Time clear by iterator ArrayList : " + delta1 + " ms");
 
 //        for (String el: passportID) {
 //            System.out.println(el);

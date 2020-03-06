@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -25,12 +26,21 @@ public class PassportLinkedList {
         System.out.println("Size of LinkedList : " + passportID.size());
         System.out.println("Time Add elements to LinkedList : " + delta + " ms\n");
 
+//        long start1 = System.currentTimeMillis();
+//        passportID.clear();
+//        long delta1 = System.currentTimeMillis() - start1;
+//        System.out.println("Size of LinkedList : " + passportID.size());
+//        System.out.println("Time clear LinkedList : " + delta1 + " ms");
+
+        Iterator<String> itr = passportID.iterator();
         long start1 = System.currentTimeMillis();
-        passportID.clear();
+        while (itr.hasNext()) {
+            String next = itr.next();
+            itr.remove();
+        }
         long delta1 = System.currentTimeMillis() - start1;
         System.out.println("Size of LinkedList : " + passportID.size());
         System.out.println("Time clear LinkedList : " + delta1 + " ms");
-
 
 
 //        for (String el: passportID) {
