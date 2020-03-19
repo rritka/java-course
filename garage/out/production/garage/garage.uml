@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="3.0" y="534.0">garage.dto.parts.wheels.WinterWheels</node>
+    <node x="504.7590909090908" y="489.0">garage.dto.parts.engine.Engine</node>
+    <node x="0.0" y="823.0">garage.dto.parts.lock.exceptions.KeyIsWrongException</node>
+    <node x="0.0" y="726.0">garage.dto.parts.wheels.R17WinterWheels</node>
+    <node x="357.5897727272727" y="232.0">garage.dto.parts.engine.api.IEngine</node>
+    <node x="115.73636363636354" y="0.0">garage.dto.parts.wheels.api.ETypeWheel</node>
+    <node x="1762.5897727272727" y="166.0">garage.dto.cars.api.ICar</node>
+    <node x="737.0897727272727" y="33.0">garage.dto.parts.api.IParts</node>
+    <node x="1542.509090909091" y="511.5">garage.dto.parts.lock.Lock</node>
+    <node x="188.0" y="534.0">garage.dto.parts.wheels.Wheels</node>
+    <node x="1611.5897727272727" y="265.0">garage.dto.parts.lock.CopyKey</node>
+    <node x="1611.5897727272727" y="22.0">garage.dto.parts.lock.api.IKey</node>
+    <node x="556.5897727272727" y="232.5">garage.dto.parts.engine.exceptions.EngineNotStartedException</node>
+    <node x="992.5897727272727" y="243.0">garage.dto.parts.tank.api.IFuelTank</node>
+    <node x="125.5" y="265.5">garage.dto.parts.wheels.api.IWheels</node>
+    <node x="992.5897727272727" y="511.5">garage.dto.parts.tank.Tank</node>
+    <node x="1233.5897727272727" y="265.5">garage.dto.parts.lock.api.ILock</node>
+    <node x="1424.5897727272727" y="265.0">garage.dto.parts.lock.DefaultKey</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="garage.dto.parts.lock.api.ILock" target="garage.dto.parts.api.IParts">
+      <point x="-42.75" y="-37.0" />
+      <point x="1276.3397727272727" y="136.0" />
+      <point x="803.5897727272727" y="136.0" />
+      <point x="28.5" y="15.0" />
+    </edge>
+    <edge source="garage.dto.parts.lock.Lock" target="garage.dto.parts.lock.api.IKey">
+      <point x="42.75" y="-71.0" />
+      <point x="1670.759090909091" y="464.0" />
+      <point x="1960.0897727272727" y="464.0" />
+      <point x="1960.0897727272727" y="136.0" />
+      <point x="1729.4897727272728" y="136.0" />
+      <point x="52.40000000000009" y="26.0" />
+    </edge>
+    <edge source="garage.dto.parts.tank.api.IFuelTank" target="garage.dto.parts.api.IParts">
+      <point x="0.0" y="-59.5" />
+      <point x="1103.0897727272727" y="146.0" />
+      <point x="784.5897727272727" y="146.0" />
+      <point x="9.5" y="15.0" />
+    </edge>
+    <edge source="garage.dto.parts.wheels.WinterWheels" target="garage.dto.parts.wheels.api.ETypeWheel">
+      <point x="-55.0" y="-48.5" />
+      <point x="30.5" y="464.0" />
+      <point x="52.5" y="464.0" />
+      <point x="52.5" y="136.0" />
+      <point x="127.83636363636356" y="136.0" />
+      <point x="-48.39999999999998" y="48.0" />
+    </edge>
+    <edge source="garage.dto.parts.engine.api.IEngine" target="garage.dto.parts.api.IParts">
+      <point x="0.0" y="-70.5" />
+      <point x="447.0897727272727" y="146.0" />
+      <point x="765.5897727272727" y="146.0" />
+      <point x="-9.5" y="15.0" />
+    </edge>
+    <edge source="garage.dto.parts.lock.DefaultKey" target="garage.dto.parts.lock.api.IKey">
+      <point x="0.0" y="-37.5" />
+      <point x="1508.0897727272727" y="146.0" />
+      <point x="1650.8897727272727" y="146.0" />
+      <point x="-26.200000000000045" y="26.0" />
+    </edge>
+    <edge source="garage.dto.parts.wheels.api.IWheels" target="garage.dto.parts.api.IParts">
+      <point x="35.5" y="-37.0" />
+      <point x="232.0" y="136.0" />
+      <point x="746.5897727272727" y="136.0" />
+      <point x="-28.5" y="15.0" />
+    </edge>
+    <edge source="garage.dto.parts.engine.Engine" target="garage.dto.parts.engine.exceptions.EngineNotStartedException">
+      <point x="44.75" y="-93.5" />
+      <point x="639.0090909090908" y="464.0" />
+      <point x="764.5897727272727" y="464.0" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="garage.dto.parts.wheels.Wheels" target="garage.dto.parts.wheels.api.ETypeWheel">
+      <point x="67.0" y="-48.5" />
+      <point x="355.5" y="464.0" />
+      <point x="309.4647727272727" y="464.0" />
+      <point x="309.4647727272727" y="116.0" />
+      <point x="224.6363636363635" y="116.0" />
+      <point x="48.39999999999998" y="48.0" />
+    </edge>
+    <edge source="garage.dto.parts.wheels.api.IWheels" target="garage.dto.parts.wheels.api.ETypeWheel">
+      <point x="-35.5" y="-37.0" />
+      <point x="161.0" y="146.0" />
+      <point x="176.23636363636354" y="146.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="garage.dto.parts.lock.Lock" target="garage.dto.parts.lock.api.ILock">
+      <point x="-42.75" y="-71.0" />
+      <point x="1585.259090909091" y="464.0" />
+      <point x="1319.0897727272727" y="464.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="garage.dto.parts.wheels.WinterWheels" target="garage.dto.parts.wheels.api.IWheels">
+      <point x="55.0" y="-48.5" />
+      <point x="140.5" y="464.0" />
+      <point x="161.0" y="464.0" />
+      <point x="-35.5" y="37.0" />
+    </edge>
+    <edge source="garage.dto.parts.wheels.R17WinterWheels" target="garage.dto.parts.wheels.WinterWheels">
+      <point x="42.75" y="-26.0" />
+      <point x="128.25" y="701.0" />
+      <point x="126.75" y="701.0" />
+      <point x="41.25" y="48.5" />
+    </edge>
+    <edge source="garage.dto.parts.engine.Engine" target="garage.dto.parts.engine.api.IEngine">
+      <point x="-44.75" y="-93.5" />
+      <point x="549.5090909090908" y="464.0" />
+      <point x="447.0897727272727" y="464.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="garage.dto.parts.lock.api.ILock" target="garage.dto.parts.lock.api.IKey">
+      <point x="42.75" y="-37.0" />
+      <point x="1361.8397727272727" y="136.0" />
+      <point x="1624.6897727272726" y="136.0" />
+      <point x="-52.40000000000009" y="26.0" />
+    </edge>
+    <edge source="garage.dto.parts.wheels.Wheels" target="garage.dto.parts.wheels.api.IWheels">
+      <point x="-67.0" y="-48.5" />
+      <point x="221.5" y="464.0" />
+      <point x="232.0" y="464.0" />
+      <point x="35.5" y="37.0" />
+    </edge>
+    <edge source="garage.dto.parts.tank.Tank" target="garage.dto.parts.tank.api.IFuelTank">
+      <point x="0.0" y="-71.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="garage.dto.parts.lock.CopyKey" target="garage.dto.parts.lock.api.IKey">
+      <point x="0.0" y="-37.5" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="garage.dto.cars.api.ICar" target="garage.dto.parts.lock.api.IKey">
+      <point x="0.0" y="-136.5" />
+      <point x="1856.0897727272727" y="146.0" />
+      <point x="1703.2897727272727" y="146.0" />
+      <point x="26.200000000000045" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="2.3372847011144895" x="1749.7336590890502" y="280.61175727787816" />
+  <SelectedNodes>
+    <node>garage.dto.cars.api.ICar</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
