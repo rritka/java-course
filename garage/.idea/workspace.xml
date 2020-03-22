@@ -7,6 +7,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1ZLLHmajlQEyF4uEZA8cUZq9d7A" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -15,7 +23,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Enum-and-RegularExpressions/src/WarAndPeace" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -26,7 +34,21 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyMain (1)">
+  <component name="RunManager" selected="Application.AbstractFactoryMain">
+    <configuration name="AbstractFactoryMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dto.transport.abstractFactory.AbstractFactoryMain" />
+      <module name="garage" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FactoryMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dto.cars.FactoryMethod.FactoryMain" />
+      <module name="garage" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyMain" />
       <module name="garage" />
@@ -49,6 +71,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AbstractFactoryMain" />
+        <item itemvalue="Application.FactoryMain" />
         <item itemvalue="Application.MyMain (1)" />
         <item itemvalue="Application.MyMain" />
       </list>
@@ -72,25 +96,53 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="278" y="24" width="800" height="675" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1584613376077" />
-    <state x="491" y="75" width="374" height="573" key="#com.intellij.ide.util.MemberChooser" timestamp="1584614261893">
+    <state x="491" y="75" width="374" height="573" key="#com.intellij.ide.util.MemberChooser" timestamp="1584690521929">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="491" y="75" width="374" height="573" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1584614261893" />
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1584614968493">
+    <state x="491" y="75" width="374" height="573" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1584690521929" />
+    <state x="471" y="250" width="423" height="233" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584689772204">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584614968493" />
-    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1584614968493">
+    <state x="471" y="250" width="423" height="233" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1584689772204" />
+    <state x="435" y="0" width="476" height="726" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584690639117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584614968493" />
-    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1584614968492">
+    <state x="435" y="0" width="476" height="726" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1584690639117" />
+    <state x="416" y="112" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584645120554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584614968492" />
-    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1584614968493">
+    <state x="416" y="112" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584645120554" />
+    <state x="466" y="121" width="424" height="482" key="FileChooserDialogImpl" timestamp="1584793880886">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584614968493" />
+    <state x="466" y="121" width="424" height="482" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584793880886" />
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1584692826962">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584692826962" />
+    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1584692826961">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584692826961" />
+    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1584692826960">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584692826960" />
+    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1584692826962">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584692826962" />
+    <state x="376" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1584793838215">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="376" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584793838215" />
+    <state x="58" y="0" width="1239" height="726" key="new project wizard" timestamp="1584793926692">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="58" y="0" width="1239" height="726" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1584793926692" />
+    <state x="428" y="0" width="500" height="726" key="refactoring.ChangeSignatureDialog" timestamp="1584642502220">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="428" y="0" width="500" height="726" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1584642502220" />
   </component>
 </project>

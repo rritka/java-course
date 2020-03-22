@@ -40,10 +40,6 @@ public class Car {
         }return value;
     }
 
-
-
-
-
     public String getVin() {
         return vin;
     }
